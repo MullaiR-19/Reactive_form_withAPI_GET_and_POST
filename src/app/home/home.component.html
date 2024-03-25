@@ -1,0 +1,44 @@
+<h1>
+  This is my website!
+</h1>
+
+<table>
+  <tbody>
+      <tr>
+          <td><app-login [userData]="registeredValues"></app-login></td>
+          <td><app-register (registerCarrier)="onRegister($event)"></app-register></td>
+      </tr>
+  </tbody>
+</table>
+
+<!-- Display fetched data -->
+<div *ngIf="data">
+  <h2>Data from API:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Website</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of data">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.website }}</td>
+        <td>
+          {{ user.address.street }}, {{ user.address.suite }},<br>
+          {{ user.address.city }}, {{ user.address.zipcode }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

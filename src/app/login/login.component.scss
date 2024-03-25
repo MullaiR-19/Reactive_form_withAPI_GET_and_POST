@@ -1,0 +1,62 @@
+form {
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+h1{
+    color: brown;
+}
+
+form input[type="text"],
+input[type="password"],
+form button {
+    padding: 10px;
+    width: 250px;
+}
+
+form button {
+    background-color: greenyellow;
+    color: chocolate;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: chocolate;
+    color: greenyellow;
+    /* Change background color on hover */
+}
+
+table{
+    border-collapse: collapse;
+}
+td{
+    vertical-align: top;
+  }
+
+input.ng-invalid.ng-touched{
+    border: red 2px solid;
+}
+
+small{
+    font-weight: bold;
+    font-size: small;
+  }

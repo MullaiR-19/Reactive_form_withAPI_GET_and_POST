@@ -1,0 +1,44 @@
+<form [formGroup]="registerData" (ngSubmit)="registerUser()">
+    <h1>Register Here</h1>
+    <div>
+        <label for="name">Name</label><br />
+        <input type="text" id="name" placeholder="Enter Name" formControlName="name"><br />
+        <small *ngIf="registerData.get('name').invalid && registerData.get('name').touched">
+        Name should  contain at least 3 characters!
+        </small>
+    </div>
+    <!-- <div>
+        <label for="username">Username</label><br />
+        <input type="text" id="username" placeholder="Enter username" formControlName="username"><br />
+        <small *ngIf="registerData.get('username').invalid && registerData.get('username').touched">
+            Username  must be alphanumeric.
+        </small>
+    </div> -->
+    <div>
+        <label for="mailid">Email ID</label><br />
+        <input type="text" id="mailid" placeholder="Email ID" formControlName="mailid"><br />
+        <small *ngIf="registerData.get('mailid').invalid && registerData.get('mailid').touched">
+            Enter a valid  email address.
+        </small>
+    </div>
+    <!-- <div>
+        <label for="age">Age</label><br />
+        <input type="number" id="age" formControlName="age"><br />
+        <small *ngIf="registerData.get('age').invalid && registerData.get('age').touched">
+        Age should be between 18-65 
+        </small>
+    </div> -->
+    <div>
+        <label for="password">Password</label><br />
+        <input type="password" id="password" placeholder="Passowrd" formControlName="password"><br />
+        <small *ngIf="registerData.get('password').invalid && registerData.get('password').touched">
+        Password should be at lest 8 character <br />
+        must contain atleast Uppercase Lowecase <br />
+        one number one character and <br />
+        one special character .
+        </small>
+    </div>
+    <div>
+        <button type="submit">Register</button>
+    </div>
+</form>
